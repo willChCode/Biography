@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  background-image: linear-gradient(
+      0deg,
+      rgb(231, 231, 231),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('./img/backFullHD.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'PT Serif', serif;
+}
+@media (min-width: 1000px) {
+  .profile {
+    width: 700px;
+    display: grid;
+    grid-template-areas:
+      'perfil paragraph1'
+      'paragraph2 paragraph2';
+    padding: 0 3rem 0 3rem;
+    gap: 2px;
+    place-content: center;
+    place-items: center;
+  }
+  .profile .perfil {
+    grid-area: perfil;
+    @apply border-8;
+  }
+  .profile .paragraph1 {
+    grid-area: paragraph1;
+    @apply text-xl;
+  }
+  .profile .paragraph2 {
+    grid-area: paragraph2;
+    @apply text-xl;
+  }
+}
